@@ -1,34 +1,35 @@
 {
   "name": "split-file",
-  "version": "2.3.0",
-  "private": false,
+  "version": "3.0.0",
+  "type": "module",
+  "exports": "./src/split-file.ts",
   "description": "Splitting and merging files with NodeJS",
+  "packageManager": "yarn@4.5.0",
   "keywords": [
     "split",
     "file",
     "stream"
   ],
   "author": "Tom Valk <tomvalk@lt-box.info",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:tomvlk/node-split-file.git"
-  },
+  "repository": "git@github.com:rtritto/node-split-file.git",
   "bugs": {
-    "url": "https://github.com/tomvlk/node-split-file/issues"
+    "url": "github:rtritto/node-split-file/issues"
   },
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "yarn node --import tsx/esm ./__tests__/split-file.test.ts"
   },
-  "bin": {
-    "split-file": "split-file-cli.js"
-  },
+  "bin": "./src/split-file-cli.ts",
   "license": "MIT",
-  "main": "split-file",
-  "dependencies": {
-    "bluebird": "^3.7.2"
-  },
   "devDependencies": {
-    "jest": "^26.6.3",
-    "mocha": "^8.4.0"
+    "@types/eslint": "^8.56.12",
+    "@types/node": "^22.5.5",
+    "@yarnpkg/sdks": "^3.2.0",
+    "eslint": "^8.57.1",
+    "mocha": "^8.4.0",
+    "tsx": "^4.19.1",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=20 || >=22"
   }
 }
