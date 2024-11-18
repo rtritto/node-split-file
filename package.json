@@ -16,7 +16,7 @@
     "url": "github:rtritto/node-split-file/issues"
   },
   "scripts": {
-    "test": "yarn node --import tsx/esm ./__tests__/split-file.test.ts"
+    "test": "tsx --test --test-concurrency=1 ./__tests__/split-file.test.ts"
   },
   "bin": "./src/split-file-cli.ts",
   "license": "MIT",
